@@ -1,5 +1,5 @@
 import { BadRequestException, ForbiddenException, Injectable } from '@nestjs/common';
-import { PrismaService } from 'prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 import { RegisterDto } from './dto/register-dto';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt'
@@ -65,7 +65,6 @@ export class AuthService {
         if (!token) {
             throw new ForbiddenException()
         }
-
         
         res.cookie('token',token)
 
