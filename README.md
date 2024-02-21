@@ -1,73 +1,81 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+<h1 align="center">NestJs Simple Restful API</h1>
+<h1></h1>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Table of Contents
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Project Pattern](#project-pattern)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Links](#links)
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Overview
+
+Made by : [FarelW](https://github.com/FarelW)
+
+Here is the purpose of making this project :
+- To create user authentication and protection cookie-jwt token
+- To make a sustainable database
+- To create a RESTFUL API that contains Create Read Update and Delete methods toward database
+
+## Built With
+
+- [NestJS](https://nestjs.com/)
+- [Prisma](https://www.prisma.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## Project Pattern
+- `Folders`: The src folder divide into 2 different folders, such as (auth and users), auth used for handling user authentication and users used for handling method for getting user data.
+- `Controller`: This is responsible for handling HTTP requests and to define endpoints with their own method and calling functions from service.
+- `Service`: This contains handler or logic to handle the operations of data processing and also callable.
+- `Modules`: This contains the method from the folder src that use to pass the logic from another module, in this project I made UsersModule, AuthModule, and PrismaModule.
+
+## Features
+- `User Authentication`: This feature enables users to signup, signin, and signout with an authentication guard with cookie token.
+- `Get Data User`: This feature enables users to get their data.
+- `Change Username`: This feature enables users to change their username.
+
+## Prerequisites
+
+To run this project, you will need to perform several installations, including:
+- `Node.js` : Node.js is essential for running JavaScript on the server-side and for managing JavaScript-based build processes, including those used in React applications.
+- `npm` (Node package manager) : npm is indeed the package manager for JavaScript and is used to install and manage JavaScript packages and libraries, including those required for React development.
 
 ## Installation
 
-```bash
-$ npm install
+If you want to run this program you will need to do these steps
+
+1. Clone this repository :
+```shell
+git clone https://github.com/FarelW/NestJS-API
 ```
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+2. Open directory :
+```shell
+cd  NestJS-API
 ```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+3. Install all packages :
+```shell
+npm install
 ```
 
-## Support
+4. Run API
+``` shell
+npm run start
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+5. For unit testing
+``` shell
+npm run test:e2e
+```
 
-## Stay in touch
+The backend server will run in port:8080, make sure that the port is not occupied
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+## Links
+- [Repository](https://github.com/FarelW/NestJS-API)
+- Issue tracker :
+   - If you encounter any issues with the program, come across any disruptive bugs, or have any suggestions for improvement, please don't hesitate to reach out by sending an email to winaldafarell@gmail.com Your feedback is greatly appreciated.
